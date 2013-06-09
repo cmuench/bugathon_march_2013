@@ -725,9 +725,7 @@ class Mage_Adminhtml_Catalog_ProductController extends Mage_Adminhtml_Controller
                             ->setStoreId($storeTo)
                             ->save();
                     }
-                }
-
-                Mage::getModel('catalogrule/rule')->applyAllRulesToProduct($productId);
+                }                
 
                 $this->_getSession()->addSuccess($this->__('The product has been saved.'));
             } catch (Mage_Core_Exception $e) {
