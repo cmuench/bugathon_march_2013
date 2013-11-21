@@ -240,7 +240,7 @@ function mageCoreErrorHandler($errno, $errstr, $errfile, $errline){
             break;
     }
 
-    $errorMessage .= ": {$errstr}  in {$errfile} on line {$errline}";
+    $errorMessage .= ": {$errstr} in {$errfile} on line {$errline}";
     if (Mage::getIsDeveloperMode()) {
         throw new Exception($errorMessage);
     } else {
